@@ -33,7 +33,7 @@
 
 ## Техническая реализация
 1. **Парсинг флагов**: Используется пакет `flag`
-2. **Чтение файла**: bufio.Scanner
+2. **Чтение файла**: `bufio.Scanner`
 3. **Сетевая проверка**:
 * Используется протокол TCP.
 * Реализуется функция `pingHost(host string) (success bool, latency time.Duration, err error)` .
