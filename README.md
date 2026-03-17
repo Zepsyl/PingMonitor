@@ -46,7 +46,7 @@
 `signalChan := make(chan os.Signal, 1)`
 `signal.Notify(signalChan, syscall.SIGINT, syscall.SIGTERM)`
 * При получении сигнала в консоль выводится сообщение `"Shutting down... Waiting for workers to finish."` и воркеры завершают работу с помощью  
-`   close(stop)    // Signals workers to stop`  
+` close(stop)    // Signals workers to stop`  
 `	wg.Wait()      // Waits for all goroutines to finish`  
 `	close(results) // Closes channel to finish the listener`
 
