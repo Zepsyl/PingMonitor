@@ -25,9 +25,9 @@ type PingResult struct {
 
 func main() {
 	// 1. Parsing Flags
-	filePath 	:= flag.String("f", "", "Path to the hosts file")
-	count 		:= flag.Int("c", 1, "Number of retries (for one-time check mode)")
-	monitor 	:= flag.Bool("monitor", false, "Enable continuous monitoring mode")
+	filePath := flag.String("f", "", "Path to the hosts file")
+	count := flag.Int("c", 1, "Number of retries (for one-time check mode)")
+	monitor := flag.Bool("monitor", false, "Enable continuous monitoring mode")
 	flag.Parse()
 
 	if *filePath == "" {
