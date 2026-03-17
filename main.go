@@ -101,7 +101,7 @@ func runOnceMode(hosts []string, count int) {
 
 // Mode 2: Continuous monitoring
 func runMonitoringMode(hosts []string) {
-	logFile, err := os.OpenFile("monitor.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	logFile, err := os.OpenFile("monitor.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		log.Fatalf("Failed to open log file: %v", err)
 	}
@@ -132,7 +132,7 @@ func runMonitoringMode(hosts []string) {
 						Response:  latency,
 						Timestamp: time.Now(),
 					}
-					time.Sleep(5 * time.Second) // Default monitoring interval
+					time.Sleep(10 * time.Second) // Default monitoring interval
 				}
 			}
 		}(host)
